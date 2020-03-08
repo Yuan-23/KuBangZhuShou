@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">酷邦小助手</string>
+    <string name="network_error">网络或服务端异常，请求数据失败，请稍后重试</string>
+    <string-array name="agreement">
+        <item>用户协议</item>
+        <item>免责声明</item>
+    </string-array>
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@color/white"
+    android:paddingStart="10dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="8dp">
+
+    <ImageView
+        android:id="@+id/thumbnail_iv"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="12dp"
+        tools:src="@drawable/temp_img" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/thumbnail_iv"
+        android:layout_toRightOf="@id/thumbnail_iv"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        tools:text="包包" />
+
+    <TextView
+        android:id="@+id/intro_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_tv"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/thumbnail_iv"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/snap_up_state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro_tv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="14dp"
+        tools:text="已抢14件" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro_tv"
+        android:layout_alignStart="@id/intro_tv"
+        android:layout_alignTop="@id/snap_up_state_tv"
+        android:layout_alignBottom="@id/snap_up_state_tv"
+        android:layout_toLeftOf="@id/snap_up_state_tv"
+        android:max="100"
+        android:progress="20"
+        android:progressDrawable="@drawable/progress_bar_bg" />
+
+
+    <TextView
+        android:id="@+id/progress_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/progress_bar"
+        android:layout_alignEnd="@id/progress_bar"
+        android:layout_alignBottom="@id/progress_bar"
+        android:layout_marginEnd="4dp"
+        android:gravity="center"
+        android:text="20%"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/price_after_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/snap_up_state_tv"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/thumbnail_iv"
+        android:textColor="@color/red"
+        android:textSize="14dp"
+        tools:text="￥999" />
+
+    <com.coupon.coupon580.core.widget.DeleteLineTextView
+        android:id="@+id/price_before_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/price_after_tv"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/price_after_tv"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="13dp"
+        tools:text="￥1999" />
+
+    <TextView
+        android:id="@+id/discount_coupon_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/price_after_tv"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/item_commodity_discount_coupon_bg"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="3dp"
+        android:text="马上抢"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+
+</RelativeLayout>

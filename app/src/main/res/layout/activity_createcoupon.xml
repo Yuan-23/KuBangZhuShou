@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mine.activity.EditInfoActivity">
+
+    <com.coupon.coupon580.core.widget.MyToolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="发券" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cca_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="651dp"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/coupon_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/coupon_title_text"
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="标  题:"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/coupon_title_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:ems="10"
+                            android:hint="请输入优惠券标题"
+                            android:inputType="textPersonName"
+                            android:textColorHint="#dbdbdb" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/coupon_attr"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="16dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/coupon_title">
+
+                        <TextView
+                            android:id="@+id/coupon_attr_text"
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="关键字:"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/coupon_attr_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:ems="10"
+                            android:hint="请输入优惠券关键字"
+                            android:inputType="textPersonName"
+                            android:textColorHint="#dbdbdb" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/coupon_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="16dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/coupon_attr">
+
+                        <TextView
+                            android:id="@+id/coupon_content_text"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="简  述:"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/coupon_content_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:ems="10"
+                            android:gravity="center_vertical"
+                            android:hint="请简述优惠券内容"
+                            android:inputType="textMultiLine"
+                            android:maxLines="3"
+                            android:textColorHint="#dbdbdb" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/coupon_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="16dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/coupon_content">
+
+                        <TextView
+                            android:id="@+id/coupon_picture_text"
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:text="上传图片:"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp" />
+
+                        <View
+                            android:id="@+id/coupon_picture_upload"
+                            android:layout_width="220dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7" />
+
+                        <TextView
+                            android:id="@+id/coupon_picture_hint"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:text="待上传"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_5c5c5c"
+                            android:textSize="16dp" />
+
+                        <ImageButton
+                            android:id="@+id/coupon_uploadpic"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            app:srcCompat="@drawable/picture_upload" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/coupon_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="16dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/coupon_picture">
+
+                        <TextView
+                            android:id="@+id/coupon_address_text"
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="领券地址:"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/coupon_address_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:ems="10"
+                            android:hint="请输入优惠券地址"
+                            android:inputType="textPersonName"
+                            android:textColorHint="#dbdbdb" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/coupon_check"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/withdraw_btn_bg"
+                        android:gravity="center"
+                        android:text="发  布"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/coupon_address" />
+
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

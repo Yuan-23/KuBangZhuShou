@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingStart="20dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="12dp">
+
+    <ImageView
+        android:id="@+id/thumbnail_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:src="@drawable/temp_img" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="12dp">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@id/sale_tv"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            tools:text="三只松鼠大礼包" />
+
+        <TextView
+            android:id="@+id/sale_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/name_tv"
+            android:layout_alignTop="@id/name_tv"
+            android:layout_alignBottom="@id/name_tv"
+            android:layout_alignParentEnd="true"
+            android:gravity="end|center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            tools:text="已售出123件" />
+
+        <TextView
+            android:id="@+id/intro_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_tv"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="14dp"
+            tools:text="商品简介商品简介商品简介商品简介商品简介商品简介商品简介商品简介商品简介" />
+
+        <ImageView
+            android:id="@+id/discount_coupon_iv"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/icon_discount_coupon" />
+
+        <TextView
+            android:id="@+id/discount_coupon_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="4dp"
+            android:layout_toLeftOf="@id/price_before_tv"
+            android:layout_toRightOf="@id/discount_coupon_iv"
+            android:ellipsize="end"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            tools:text="5元" />
+
+
+        <TextView
+            android:id="@+id/price_after_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/discount_coupon_tv"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/red"
+            android:textSize="16dp"
+            tools:text="￥29" />
+
+        <com.coupon.coupon580.core.widget.DeleteLineTextView
+            android:id="@+id/price_before_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/discount_coupon_tv"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@id/price_after_tv"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="14dp"
+            tools:text="￥199" />
+
+    </RelativeLayout>
+
+</LinearLayout>

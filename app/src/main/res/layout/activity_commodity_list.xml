@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".hot.activity.CommodityListActivity">
+
+    <com.coupon.coupon580.core.widget.MyToolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="商品列表" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/order_by_default_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/order_by_default_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="综合排序"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/order_by_default_iv"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="4dp"
+                android:layout_toRightOf="@id/order_by_default_tv"
+                android:src="@drawable/icon_rank"
+                android:tint="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/order_by_default_indicator"
+                android:layout_width="16dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/tab_indicator"
+                android:tint="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order_by_price_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/order_by_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="价格"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/order_by_price_iv"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="4dp"
+                android:layout_toRightOf="@id/order_by_price_tv"
+                android:src="@drawable/icon_rank"
+                android:tint="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/order_by_price_indicator"
+                android:layout_width="16dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/tab_indicator"
+                android:tint="@color/colorPrimary"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order_by_sold_num_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/order_by_sold_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="销量"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/order_by_sold_num_iv"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="4dp"
+                android:layout_toRightOf="@id/order_by_sold_num_tv"
+                android:src="@drawable/icon_rank"
+                android:tint="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/order_by_sold_num_indicator"
+                android:layout_width="16dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/tab_indicator"
+                android:tint="@color/colorPrimary"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/commodity_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+
+    android:src="@drawable/icon_back_circle_white" />
+</LinearLayout>

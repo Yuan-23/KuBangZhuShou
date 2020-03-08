@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="8dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/discount_coupon_ll"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/discount_coupon_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/coupon_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            tools:text="10元" />
+
+        <TextView
+            android:id="@+id/intro_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            tools:text="无门槛" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/store_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/discount_coupon_ll"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        tools:text="三只松鼠官方旗舰店" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/use_now_tv"
+        android:layout_below="@id/store_name_tv"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/discount_coupon_ll"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="14dp"
+        tools:text="2019.1.24-2019.1.26" />
+
+    <com.coupon.coupon580.core.widget.RoundTextView
+        android:id="@+id/use_now_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/discount_coupon_ll"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="6dp"
+        android:paddingStart="12dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="3dp"
+        android:text="立即使用"
+        android:textColor="@color/color_fe8c2e"
+        android:textSize="14dp"
+        app:rtvBorderColor="@color/color_fe8c2e"
+        app:rtvBorderWidth="1dp"
+        app:rtvRadius="14dp" />
+
+
+</RelativeLayout>

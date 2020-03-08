@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.0 rc3'
+    defaultConfig {
+        applicationId "com.nmsl.coolmall"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "androi   d.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    signingConfigs {
+        debug {
+            keyAlias 'AndroidBoy'
+            keyPassword '123456.'
+            storeFile file('coolmall.jks')
+            storePassword '123456.'
+        }
+        release {
+            keyAlias 'AndroidBoy'
+            keyPassword '123456.'
+            storeFile file('coolmall.jks')
+            storePassword '123456.'
+        }
+    }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'armeabi-v7a', 'x86_64'
+            universalApk true
+        }
+    }
+}
+
+dependencies {
+    def dependence = rootProject.ext
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Test
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // AndroidSupport
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:${dependence.AndroidSupportLibVersion}"
+
+    // Network
+    implementation "com.lzy.net:okgo:${dependence.OkGo}"
+    implementation "com.squareup.okhttp3:okhttp:${dependence.OkHttp}"
+    implementation "com.google.code.gson:gson:${dependence.Gson}"
+    implementation "com.squareup.retrofit2:retrofit:${dependence.Retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${dependence.Retrofit}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${dependence.Retrofit}"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:${dependence.Glide}"
+    implementation "com.github.bumptech.glide:okhttp3-integration:${dependence.Glide}"
+    annotationProcessor "com.github.bumptech.glide:compiler:${dependence.Glide}"
+
+    // View
+    implementation "com.android.support.constraint:constraint-layout:${dependence.ConstraintLayout}"
+    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:${dependence.BRVAH}"
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.2'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.nex3z:flow-layout:1.2.4'
+    implementation 'com.airbnb.android:lottie:2.7.0'
+
+    // Others
+    implementation "com.jakewharton:butterknife:${dependence.ButterKnife}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${dependence.ButterKnife}"
+    implementation "com.blankj:utilcode:${dependence.UtilCode}"
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
+    implementation project(path: ':searchview')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:28.0.0'
+
+}

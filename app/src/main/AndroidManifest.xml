@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.coupon.coupon580">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name="com.coupon.coupon580.BaseApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.coupon.coupon580.home.activity.AgricultureListActivity"></activity>
+        <activity android:name="com.coupon.coupon580.hot.activity.NewCommodityDetailActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.ForgetPswActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.SendInfoActivity" />
+        <activity android:name="com.coupon.coupon580.home.activity.EducationListActivity" />
+<!--        <activity android:name=".hot.activity.EducationListActivity" />-->
+        <activity android:name="com.coupon.coupon580.core.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.coupon.coupon580.mine.activity.ChooseTipsActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.EditPwdActivity" />
+        <activity
+            android:name="com.coupon.coupon580.search.activity.RobotTalkActivity"
+            android:theme="@style/AppTheme.RobotTalk"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity android:name="com.coupon.coupon580.mine.activity.MyCouponActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.WithdrawActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.MyProfitActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.AssociateAccountActivity" />
+        <activity android:name="com.coupon.coupon580.home.activity.SnapUpActivity" />
+        <activity android:name="com.coupon.coupon580.hot.activity.CommodityDetailActivity" />
+        <activity
+            android:name="com.coupon.coupon580.hot.activity.CommodityListActivity"
+            android:theme="@style/AppTheme.NoTranslucentStatus" />
+        <activity android:name="com.coupon.coupon580.search.activity.SearchResultActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.RegisterActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.LoginActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.EditInfoActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.PactStateActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.PactPActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.PactActivity" />
+        <activity android:name="com.coupon.coupon580.mine.activity.CreateCouponActivity" />
+        <activity
+            android:name="com.coupon.coupon580.core.activity.MainActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="com.coupon.coupon580.search.activity.SearchActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" /> <!-- 百度语音识别SDK -->
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="16230994" />
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="37x8ZOyaG9GOx2za6Go1CD6u" />
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="E2cwdRizGiP1igGXmbllPPLLsRZVzP6E" />
+
+        <service
+            android:name="com.baidu.speech.VoiceRecognitionService"
+            android:exported="false" />
+
+        <provider
+            android:name="com.coupon.coupon580.core.image.MyFileProvider"
+            android:authorities="com.coupon.coupon580"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+    </application>
+
+</manifest>

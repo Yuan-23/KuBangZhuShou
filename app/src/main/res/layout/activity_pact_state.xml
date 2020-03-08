@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mine.activity.EditInfoActivity">
+
+    <com.coupon.coupon580.core.widget.MyToolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="免责声明" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="673dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pstate0_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/pstate_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="《免责声明》"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/pstate0_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/pstate_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  【酷邦提醒您】：在使用酷邦网络服务（以下简称酷邦）前，请您务必仔细阅读并透彻理解本声明。您可以选择不使用酷邦，但如果您使用酷邦，您的使用行为将被视为对本声明全部内容的认可。"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/pstate0_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/pstate1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="    1. 在您在本网站中与卖家产生的所有交易，均在第三方电商平台内进行，对于交易过程中的资金及个人信息的安全问题，均由第三方电商平台负 责，本网站不承担任何交易过程产生的资金及个人信息安全问题的责任。"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/pstate1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/pstate2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="    2. 卖家提供的产品和服务由卖家独立负责。在交易过程中遇到任何质量或者服务问题，均可以按照正常的维权流程进行维权，本网站不对卖家提供的商品或服务承担任何责任。 "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/pstate2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/pstate3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="    3. 为了保障您的权益，本网站将定期对卖家提供的商品宣传进行检查，但请您理解检查不可能每时每刻都在进行。所以，请您仔细阅读卖家对商品的各种宣传资料，对其做出准确判断。本网站对卖家所涉及的商品和服务任何内容、宣传、和其他材料未作认证，也不对此负责或承担任何责任。"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/pstate3_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/pstate4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="    4. 您理解并同意， 酷邦仅提供第三方电商卖家的商品链接，对于卖家的商品服务的选择和交易的内容，应由您自行判断，且审慎交易。您需自行了解卖家提供的商品或服务的功能、收费标准、退款规则、服务有效期等情况并注意交易风险。如您发现卖家侵犯您的合法权益的，或您不幸遭遇网络欺诈的，请及时联系第三方电商平台，本网站会协助您维护您的合法权益。"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/pstate4_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>

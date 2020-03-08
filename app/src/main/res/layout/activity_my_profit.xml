@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mine.activity.MyProfitActivity">
+
+    <com.coupon.coupon580.core.widget.MyToolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="已获取积分" />
+
+    <TextView
+        android:id="@+id/total_profit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="当前积分："
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/user_Score_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="80dp" />
+
+    <TextView
+        android:id="@+id/score_par"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="积分等级对应表："
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/exp_profit_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="说明：用户每邀请1人增加10积分"
+        android:layout_marginStart="20dp"
+        android:textAlignment="textStart"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/score_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/score_list1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="青铜等级：      0  ~   50"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/score_list2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="白银等级：    50 ~ 130"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/score_list3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="黄金等级：  130 ~ 270"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/score_list4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="白金等级：  270 ~ 500"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/score_list5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="钻石等级：  500 ~ 850"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/score_list6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="酷邦王者：       >   850"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/profit_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="10dp"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+</LinearLayout>

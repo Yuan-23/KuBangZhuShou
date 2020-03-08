@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <ImageView
+        android:id="@+id/thumbnail_iv"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:maxWidth="140dp"
+        android:scaleType="center"
+        tools:src="@drawable/temp_img" />
+
+    <ImageView
+        android:id="@+id/flag_iv"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon_flag" />
+
+    <TextView
+        android:id="@+id/coupon_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/flag_iv"
+        android:layout_alignTop="@id/flag_iv"
+        android:layout_alignEnd="@id/flag_iv"
+        android:layout_alignBottom="@id/flag_iv"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        tools:text="￥201" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thumbnail_iv"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        tools:text="李宁CBA全明星款式" />
+
+    <TextView
+        android:id="@+id/after_coupon_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_tv"
+        android:layout_marginTop="4dp"
+        android:text="关键字："
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+
+    <TextView
+        android:id="@+id/price_after_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/after_coupon_tv"
+        android:layout_marginStart="4dp"
+        android:layout_toRightOf="@id/after_coupon_tv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14dp"
+        tools:text="99.99" />
+
+</RelativeLayout>
+
+

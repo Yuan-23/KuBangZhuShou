@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/bottom_item_1"
+        android:icon="@drawable/ic_home_s"
+        android:orderInCategory="0"
+        android:title="首页"/>
+
+
+    <item
+        android:id="@+id/bottom_item_2"
+        android:icon="@drawable/icon_category"
+        android:orderInCategory="1"
+        android:title="分类" />
+    <!--<item
+        android:id="@+id/bottom_item_3"
+        android:icon="@drawable/icon_hot"
+        android:orderInCategory="1"
+        android:title="热门" />-->
+    <item
+        android:id="@+id/bottom_item_3"
+        android:icon="@drawable/icon_mine"
+        android:orderInCategory="2"
+        android:title="我的" />
+
+
+</menu>
